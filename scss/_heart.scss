@@ -1,0 +1,95 @@
+@mixin animation($name, $duration, $delay, $count) {
+	-webkit-animation: $name $duration $delay $count;
+	-moz-animation: $name $duration $delay $count;
+	-o-animation: $name $duration $delay $count;
+	-ms-animation: $name $duration $delay $count;
+	animation: $name $duration $delay $count;
+}
+
+@for $i from 0 to 5 {
+	.heart-animation#{$i} {
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		transform: translateX(-50%);
+		background-image: url("../heart_red.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 40px;
+		width: 40px;
+		opacity: 0;
+
+		@include animation(fly#{$i}, 6s, random() / 100 + s, 1);
+	}
+}
+
+@keyframes fly0 {
+	0% {
+		top: 60%;
+		left: 50%;
+		opacity: 1;
+	}
+	100% {
+		top: 5%;
+		left: 80%;
+		opacity: 0;
+	}
+}
+@keyframes fly1 {
+	0% {
+		top: 60%;
+		left: 50%;
+		opacity: 1;
+	}
+	100% {
+		top: 15%;
+		left: 25%;
+		opacity: 0;
+	}
+}
+@keyframes fly2 {
+	0% {
+		top: 60%;
+		left: 50%;
+		opacity: 1;
+	}
+	100% {
+		top: 10%;
+		left: 60%;
+		opacity: 0;
+	}
+}
+@keyframes fly3 {
+	0% {
+		top: 60%;
+		left: 50%;
+		opacity: 1;
+	}
+	15% {
+		top: 55%;
+		left: 45%;
+		opacity: 0.8;
+	}
+	100% {
+		top: 10%;
+		left: 60%;
+		opacity: 0;
+	}
+}
+@keyframes fly4 {
+	0% {
+		top: 60%;
+		left: 50%;
+		opacity: 1;
+	}
+	20% {
+		top: 50%;
+		left: 60%;
+		opacity: 0.7;
+	}
+	100% {
+		top: 20%;
+		left: 60%;
+		opacity: 0;
+	}
+}

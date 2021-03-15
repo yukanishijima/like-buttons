@@ -1,0 +1,252 @@
+.heart-container, .bread-container {
+  display: inline-block;
+  height: 100vh;
+  width: 50vw;
+  position: fixed;
+}
+
+.heart-container img, .bread-container img {
+  background: none;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.heart-container img:hover, .bread-container img:hover {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.heart-container {
+  background-color: #1d3557;
+}
+
+.bread-container {
+  background-color: #f9d265;
+  left: 50%;
+}
+
+.heart-animation0 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../heart_red.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+  animation: fly0 6s 0.00331s 1;
+}
+
+.heart-animation1 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../heart_red.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+  animation: fly1 6s 0.0033s 1;
+}
+
+.heart-animation2 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../heart_red.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+  animation: fly2 6s 0.00068s 1;
+}
+
+.heart-animation3 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../heart_red.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+  animation: fly3 6s 0.00339s 1;
+}
+
+.heart-animation4 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../heart_red.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+  animation: fly4 6s 0.00543s 1;
+}
+
+@keyframes fly0 {
+  0% {
+    top: 60%;
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    top: 5%;
+    left: 80%;
+    opacity: 0;
+  }
+}
+
+@keyframes fly1 {
+  0% {
+    top: 60%;
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    top: 15%;
+    left: 25%;
+    opacity: 0;
+  }
+}
+
+@keyframes fly2 {
+  0% {
+    top: 60%;
+    left: 50%;
+    opacity: 1;
+  }
+  100% {
+    top: 10%;
+    left: 60%;
+    opacity: 0;
+  }
+}
+
+@keyframes fly3 {
+  0% {
+    top: 60%;
+    left: 50%;
+    opacity: 1;
+  }
+  15% {
+    top: 55%;
+    left: 45%;
+    opacity: 0.8;
+  }
+  100% {
+    top: 10%;
+    left: 60%;
+    opacity: 0;
+  }
+}
+
+@keyframes fly4 {
+  0% {
+    top: 60%;
+    left: 50%;
+    opacity: 1;
+  }
+  20% {
+    top: 50%;
+    left: 60%;
+    opacity: 0.7;
+  }
+  100% {
+    top: 20%;
+    left: 60%;
+    opacity: 0;
+  }
+}
+
+.bread-animation0 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../bread_brown.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+  animation: jump0 1s 0s 1;
+}
+
+.bread-animation1 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../bread_brown.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+  animation: jump1 1s 0s 1;
+}
+
+@keyframes jump0 {
+  0% {
+    top: 60%;
+    left: 50%;
+    opacity: 1;
+  }
+  55% {
+    top: 25%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 60%;
+    left: 50%;
+    opacity: 0;
+  }
+}
+
+@keyframes jump1 {
+  0% {
+    top: 60%;
+    left: 50%;
+    opacity: 1;
+  }
+  10% {
+    top: 60%;
+    left: 50%;
+    opacity: 1;
+  }
+  70% {
+    top: 25%;
+    left: 50%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 60%;
+    left: 50%;
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+@import "config";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.heart-container {
+	@extend %container;
+	background-color: $heart-back;
+}
+
+.bread-container {
+	@extend %container;
+	background-color: $bread-back;
+	left: 50%;
+}
+
+@import "heart";
+@import "bread";
