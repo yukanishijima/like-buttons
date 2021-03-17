@@ -14,8 +14,15 @@
 .bread-container {
 	@extend %container;
 	background-color: $bread-back;
-	left: 50%;
+	left: 33%;
+}
+
+.rocket-container {
+	@extend %container;
+	background-color: $rocket-back;
+	left: 66%;
 }
 
 @import "heart";
 @import "bread";
+@import "rocket";

@@ -2,11 +2,12 @@ $heart-color: #e63946;
 $heart-back: #1d3557;
 $bread-color: #7f5539;
 $bread-back: #f9d265;
+$rocket-back: #a94e78;
 
 %container {
 	display: inline-block;
 	height: 100vh;
-	width: 50vw;
+	width: 33vw;
 	position: fixed;
 
 	img {
@@ -16,8 +17,9 @@ $bread-back: #f9d265;
 		height: 50px;
 		position: absolute;
 		top: 60%;
-		left: 50%;
-		transform: translateX(-50%);
+		left: 40%;
+		// to test
+		// transform: translateX(-50%);
 		z-index: 1;
 		&:hover {
 			cursor: pointer;

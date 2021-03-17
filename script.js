@@ -4,6 +4,10 @@ var heartContainer = document.querySelector(".heart-container");
 var breadBtn = document.querySelector(".breadBtn");
 var breadContainer = document.querySelector(".bread-container");
 
+var rocketBtn = document.querySelector(".rocketBtn");
+var rocketWithFire = document.querySelector(".rocket-fire");
+var rocketContainer = document.querySelector(".rocket-container");
+
 heartBtn.addEventListener("click", () => {
 	reset();
 	for (let i = 0; i < 5; i++) {
@@ -47,3 +51,23 @@ function reset() {
 		}
 	}
 }
+
+rocketBtn.addEventListener("click", () => {
+	rocketBtn.classList.add("rocket-animation");
+
+	rocketBtn.addEventListener("animationend", () => {
+		rocketBtn.classList.remove("rocket-animation");
+		rocketBtn.style.display = "none";
+
+		rocketWithFire.style.display = "block";
+		rocketWithFire.style.height = "65px";
+		rocketWithFire.classList.add("rocket-launch");
+
+		rocketWithFire.addEventListener("animationend", () => {
+			rocketWithFire.style.display = "none";
+			setTimeout(() => {
+				rocketBtn.style.display = "block";
+			}, 2000);
+		});
+	});
+});
