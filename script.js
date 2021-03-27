@@ -1,12 +1,12 @@
-var heartBtn = document.querySelector(".heartBtn");
-var heartContainer = document.querySelector(".heart-container");
+const heartBtn = document.querySelector(".heartBtn");
+const heartContainer = document.querySelector(".heart-container");
 
-var breadBtn = document.querySelector(".breadBtn");
-var breadContainer = document.querySelector(".bread-container");
+const breadBtn = document.querySelector(".breadBtn");
+const breadContainer = document.querySelector(".bread-container");
 
-var rocketBtn = document.querySelector(".rocketBtn");
-var rocketWithFire = document.querySelector(".rocket-fire");
-var rocketContainer = document.querySelector(".rocket-container");
+const rocketBtn = document.querySelector(".rocketBtn");
+const rocketWithFire = document.querySelector(".rocket-fire");
+const rocketContainer = document.querySelector(".rocket-container");
 
 heartBtn.addEventListener("click", () => {
 	reset();
@@ -70,4 +70,21 @@ rocketBtn.addEventListener("click", () => {
 			}, 2000);
 		});
 	});
+});
+
+const alienContainer = document.querySelector(".alien-container");
+const curtain = document.querySelector(".curtain");
+const beam = document.querySelector(".beam");
+const alienBtn = document.querySelector(".alienBtn");
+
+alienBtn.addEventListener("click", () => {
+	curtain.classList.add("curtain-animation");
+
+	setTimeout(() => {
+		beam.classList.add("beam-animation");
+	}, 1200);
+
+	setTimeout(() => {
+		alienBtn.classList.add("alien-animation");
+	}, 4000);
 });

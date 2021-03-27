@@ -1,13 +1,19 @@
 $heart-color: #e63946;
 $heart-back: #1d3557;
+
 $bread-color: #7f5539;
 $bread-back: #f9d265;
+
 $rocket-back: #a94e78;
+
+$alien-back: #678d58;
+$alien-curtain: #020525;
+$alien-beam: #6d6d38;
 
 %container {
 	display: inline-block;
 	height: 100vh;
-	width: 33vw;
+	width: 25vw;
 	position: fixed;
 
 	img {

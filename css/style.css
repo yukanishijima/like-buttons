@@ -1,11 +1,11 @@
-.heart-container, .bread-container, .rocket-container {
+.heart-container, .bread-container, .rocket-container, .alien-container, .alien-with-beam {
   display: inline-block;
   height: 100vh;
-  width: 33vw;
+  width: 25vw;
   position: fixed;
 }
 
-.heart-container img, .bread-container img, .rocket-container img {
+.heart-container img, .bread-container img, .rocket-container img, .alien-container img, .alien-with-beam img {
   background: none;
   border: 0;
   width: 50px;
@@ -16,7 +16,7 @@
   z-index: 1;
 }
 
-.heart-container img:hover, .bread-container img:hover, .rocket-container img:hover {
+.heart-container img:hover, .bread-container img:hover, .rocket-container img:hover, .alien-container img:hover, .alien-with-beam img:hover {
   cursor: pointer;
 }
 
@@ -32,12 +32,17 @@
 
 .bread-container {
   background-color: #f9d265;
-  left: 33%;
+  left: 25%;
 }
 
 .rocket-container {
   background-color: #a94e78;
-  left: 66%;
+  left: 50%;
+}
+
+.alien-container {
+  background-color: #678d58;
+  left: 75%;
 }
 
 .heart-animation0 {
@@ -51,7 +56,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly0 6s 0.00321s 1;
+  animation: fly0 6s 0.00006s 1;
 }
 
 .heart-animation1 {
@@ -65,7 +70,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly1 6s 0.00168s 1;
+  animation: fly1 6s 0.00304s 1;
 }
 
 .heart-animation2 {
@@ -79,7 +84,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly2 6s 0.00225s 1;
+  animation: fly2 6s 0.00352s 1;
 }
 
 .heart-animation3 {
@@ -93,7 +98,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly3 6s 0.00246s 1;
+  animation: fly3 6s 0.00468s 1;
 }
 
 .heart-animation4 {
@@ -107,7 +112,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly4 6s 0.00065s 1;
+  animation: fly4 6s 0.0035s 1;
 }
 
 @keyframes fly0 {
@@ -311,6 +316,100 @@
   }
   100% {
     top: -50%;
+  }
+}
+
+.curtain-animation {
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  background-color: #020525;
+  position: absolute;
+  transition: ease-in;
+  animation: blackout 1.2s 0s 1;
+}
+
+@keyframes blackout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.alien-with-beam {
+  left: 75%;
+  z-index: 10;
+}
+
+.alien-with-beam .alienBtn {
+  z-index: 10;
+}
+
+.beam {
+  position: absolute;
+  left: 37%;
+  width: 30%;
+  height: 69%;
+  opacity: 0;
+  background-color: #6d6d38;
+}
+
+.beam .beam-gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #6d6d38, #020525);
+  background-size: 400% 400%;
+  transition: ease;
+  animation: gradient 2s 0s infinite;
+}
+
+.beam-animation {
+  top: 0;
+  opacity: 1;
+  animation: spotlight 4s 0s 1;
+}
+
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    top: -100%;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 60%;
+  }
+  50% {
+    background-position: 100% 41%;
+  }
+  100% {
+    background-position: 0% 60%;
+  }
+}
+
+.alien-animation {
+  animation: travel 4s 0s 1;
+}
+
+@keyframes travel {
+  0% {
+    transform: translate(10%, -50%);
+  }
+  50% {
+    transform: translate(-10%, -100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(10%, -200%);
   }
 }
 /*# sourceMappingURL=style.css.map */
