@@ -6,9 +6,11 @@ $bread-back: #f9d265;
 
 $rocket-back: #a94e78;
 
-$alien-back: #678d58;
+$alien-back: #275c63;
+// $alien-back: #678d58;
 $alien-curtain: #020525;
-$alien-beam: #6d6d38;
+$alien-beam: #e4e4b0;
+// $alien-beam: #6d6d38;
 
 %container {
 	display: inline-block;
@@ -23,9 +25,7 @@ $alien-beam: #6d6d38;
 		height: 50px;
 		position: absolute;
 		top: 60%;
-		left: 40%;
-		// to test
-		// transform: translateX(-50%);
+		left: calc(50% - 25px);
 		z-index: 1;
 		&:hover {
 			cursor: pointer;

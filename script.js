@@ -81,10 +81,30 @@ alienBtn.addEventListener("click", () => {
 	curtain.classList.add("curtain-animation");
 
 	setTimeout(() => {
-		beam.classList.add("beam-animation");
+		beam.classList.add("beam-animation-down");
+
+		setTimeout(() => {
+			alienBtn.classList.add("alien-animation");
+
+			setTimeout(() => {
+				beam.classList.add("beam-animation-up");
+				beam.classList.remove("beam-animation-down");
+			}, 1500);
+		}, 3000);
 	}, 1200);
 
 	setTimeout(() => {
-		alienBtn.classList.add("alien-animation");
-	}, 4000);
+		beam.classList.remove("beam-animation-up");
+		curtain.classList.remove("curtain-animation");
+
+		curtain.classList.add("curtain-open");
+
+		alienBtn.classList.remove("alien-animation");
+		alienBtn.classList.add("alien-animation-back");
+
+		setTimeout(() => {
+			curtain.classList.remove("curtain-open");
+			alienBtn.classList.remove("alien-animation-back");
+		}, 1000);
+	}, 8200);
 });

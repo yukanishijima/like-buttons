@@ -6,12 +6,14 @@
 	animation: $name $duration $delay $count;
 }
 
-.curtain-animation {
+.curtain {
 	width: 100vw;
 	height: 100vh;
-	opacity: 1;
 	background-color: $alien-curtain;
+}
+.curtain-animation {
 	position: absolute;
+	opacity: 1;
 	transition: ease-in;
 	@include animation(blackout, 1.2s, 0s, 1);
 }
@@ -23,10 +25,25 @@
 		opacity: 1;
 	}
 }
+.curtain-open {
+	position: absolute;
+	opacity: 0;
+	transition: ease-in;
+	@include animation(lightup, 3s, 0s, 1);
+}
+@keyframes lightup {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 
 .alien-with-beam {
 	@extend %container;
-	left: 75%;
+	left: 87.5%;
+	transform: translateX(-50%);
 	z-index: 10;
 	.alienBtn {
 		z-index: 10;
@@ -34,9 +51,10 @@
 }
 .beam {
 	position: absolute;
-	left: 37%;
-	width: 30%;
-	height: 69%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 4em;
+	height: 70%;
 	opacity: 0;
 	background-color: $alien-beam;
 	.beam-gradient {
@@ -45,24 +63,11 @@
 		background: linear-gradient(180deg, $alien-beam, $alien-curtain);
 		background-size: 400% 400%;
 		transition: ease;
-		@include animation(gradient, 2s, 0s, infinite);
-	}
-}
-.beam-animation {
-	top: 0;
-	opacity: 1;
-	@include animation(spotlight, 3s, 0s, 1);
-}
-@keyframes spotlight {
-	0% {
-		opacity: 0;
-		top: -100%;
-	}
-	50% {
-		top: 0;
-	}
-	100% {
-		opacity: 1;
+		@include animation(gradient, 1s, 0s, infinite);
+
+		// test
+		// box-shadow: 0px -3px 5px 5px #272724;
+		box-shadow: 0px -3px 5px 5px rgba(102, 102, 83, 0.7);
 	}
 }
 @keyframes gradient {
@@ -77,14 +82,61 @@
 	}
 }
 
+.beam-animation-down {
+	top: 0;
+	opacity: 1;
+	@include animation(spotlight-down, 3s, 0s, 1);
+}
+@keyframes spotlight-down {
+	0% {
+		opacity: 0;
+		top: -100%;
+	}
+	50% {
+		top: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.beam-animation-up {
+	opacity: 1;
+	@include animation(spotlight-up, 2.5s, 0s, 1);
+}
+@keyframes spotlight-up {
+	0% {
+		top: 0;
+	}
+	100% {
+		top: -100%;
+	}
+}
+
 .alien-animation {
-	@include animation(travel, 4s, 0s, 1);
+	transition: ease-in;
+	@include animation(travel, 4.5s, 0s, 1);
 }
 @keyframes travel {
 	0% {
+		top: 60%;
 	}
-	50% {
+	80% {
+		top: -100%;
 	}
 	100% {
+		opacity: 0;
+	}
+}
+
+.alien-animation-back {
+	transition: ease-out;
+	@include animation(appear, 2.5s, 0s, 1);
+}
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }

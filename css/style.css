@@ -12,7 +12,7 @@
   height: 50px;
   position: absolute;
   top: 60%;
-  left: 40%;
+  left: calc(50% - 25px);
   z-index: 1;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .alien-container {
-  background-color: #678d58;
+  background-color: #275c63;
   left: 75%;
 }
 
@@ -56,7 +56,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly0 6s 0.00006s 1;
+  animation: fly0 6s 0.00137s 1;
 }
 
 .heart-animation1 {
@@ -70,7 +70,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly1 6s 0.00304s 1;
+  animation: fly1 6s 0.00565s 1;
 }
 
 .heart-animation2 {
@@ -84,7 +84,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly2 6s 0.00352s 1;
+  animation: fly2 6s 0.00644s 1;
 }
 
 .heart-animation3 {
@@ -98,7 +98,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly3 6s 0.00468s 1;
+  animation: fly3 6s 0.00453s 1;
 }
 
 .heart-animation4 {
@@ -112,7 +112,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly4 6s 0.0035s 1;
+  animation: fly4 6s 0.00726s 1;
 }
 
 @keyframes fly0 {
@@ -319,12 +319,15 @@
   }
 }
 
-.curtain-animation {
+.curtain {
   width: 100vw;
   height: 100vh;
-  opacity: 1;
   background-color: #020525;
+}
+
+.curtain-animation {
   position: absolute;
+  opacity: 1;
   transition: ease-in;
   animation: blackout 1.2s 0s 1;
 }
@@ -338,8 +341,25 @@
   }
 }
 
+.curtain-open {
+  position: absolute;
+  opacity: 0;
+  transition: ease-in;
+  animation: lightup 3s 0s 1;
+}
+
+@keyframes lightup {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .alien-with-beam {
-  left: 75%;
+  left: 87.5%;
+  transform: translateX(-50%);
   z-index: 10;
 }
 
@@ -349,39 +369,22 @@
 
 .beam {
   position: absolute;
-  left: 37%;
-  width: 30%;
-  height: 69%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4em;
+  height: 70%;
   opacity: 0;
-  background-color: #6d6d38;
+  background-color: #e4e4b0;
 }
 
 .beam .beam-gradient {
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #6d6d38, #020525);
+  background: linear-gradient(180deg, #e4e4b0, #020525);
   background-size: 400% 400%;
   transition: ease;
-  animation: gradient 2s 0s infinite;
-}
-
-.beam-animation {
-  top: 0;
-  opacity: 1;
-  animation: spotlight 4s 0s 1;
-}
-
-@keyframes spotlight {
-  0% {
-    opacity: 0;
-    top: -100%;
-  }
-  50% {
-    top: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: gradient 1s 0s infinite;
+  box-shadow: 0px -3px 5px 5px rgba(102, 102, 83, 0.7);
 }
 
 @keyframes gradient {
@@ -396,20 +399,67 @@
   }
 }
 
+.beam-animation-down {
+  top: 0;
+  opacity: 1;
+  animation: spotlight-down 3s 0s 1;
+}
+
+@keyframes spotlight-down {
+  0% {
+    opacity: 0;
+    top: -100%;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.beam-animation-up {
+  opacity: 1;
+  animation: spotlight-up 2.5s 0s 1;
+}
+
+@keyframes spotlight-up {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
 .alien-animation {
-  animation: travel 4s 0s 1;
+  transition: ease-in;
+  animation: travel 4.5s 0s 1;
 }
 
 @keyframes travel {
   0% {
-    transform: translate(10%, -50%);
+    top: 60%;
   }
-  50% {
-    transform: translate(-10%, -100%);
+  80% {
+    top: -100%;
   }
   100% {
     opacity: 0;
-    transform: translate(10%, -200%);
+  }
+}
+
+.alien-animation-back {
+  transition: ease-out;
+  animation: appear 2.5s 0s 1;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
