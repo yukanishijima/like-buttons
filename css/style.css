@@ -1,11 +1,11 @@
-.heart-container, .bread-container, .rocket-container, .alien-container, .alien-with-beam {
+.alien-with-beam, .heart-container, .bread-container, .rocket-container, .alien-container {
   display: inline-block;
   height: 100vh;
   width: 25vw;
   position: fixed;
 }
 
-.heart-container img, .bread-container img, .rocket-container img, .alien-container img, .alien-with-beam img {
+.alien-with-beam img, .heart-container img, .bread-container img, .rocket-container img, .alien-container img {
   background: none;
   border: 0;
   width: 50px;
@@ -16,33 +16,8 @@
   z-index: 1;
 }
 
-.heart-container img:hover, .bread-container img:hover, .rocket-container img:hover, .alien-container img:hover, .alien-with-beam img:hover {
+.alien-with-beam img:hover, .heart-container img:hover, .bread-container img:hover, .rocket-container img:hover, .alien-container img:hover {
   cursor: pointer;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.heart-container {
-  background-color: #1d3557;
-}
-
-.bread-container {
-  background-color: #f9d265;
-  left: 25%;
-}
-
-.rocket-container {
-  background-color: #a94e78;
-  left: 50%;
-}
-
-.alien-container {
-  background-color: #275c63;
-  left: 75%;
 }
 
 .heart-animation0 {
@@ -56,7 +31,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly0 6s 0.00137s 1;
+  animation: fly0 6s 0.00684s 1;
 }
 
 .heart-animation1 {
@@ -70,7 +45,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly1 6s 0.00565s 1;
+  animation: fly1 6s 0.00705s 1;
 }
 
 .heart-animation2 {
@@ -84,7 +59,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly2 6s 0.00644s 1;
+  animation: fly2 6s 0.00868s 1;
 }
 
 .heart-animation3 {
@@ -98,7 +73,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly3 6s 0.00453s 1;
+  animation: fly3 6s 0.00928s 1;
 }
 
 .heart-animation4 {
@@ -112,7 +87,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly4 6s 0.00726s 1;
+  animation: fly4 6s 0.00849s 1;
 }
 
 @keyframes fly0 {
@@ -461,5 +436,30 @@
   100% {
     opacity: 1;
   }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.heart-container {
+  background-color: #1d3557;
+}
+
+.bread-container {
+  background-color: #f9d265;
+  left: 25%;
+}
+
+.rocket-container {
+  background-color: #a94e78;
+  left: 50%;
+}
+
+.alien-container {
+  background-color: #275c63;
+  left: 75%;
 }
 /*# sourceMappingURL=style.css.map */

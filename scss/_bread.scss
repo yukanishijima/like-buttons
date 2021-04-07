@@ -1,11 +1,3 @@
-@mixin animation($name, $duration, $delay, $count) {
-	-webkit-animation: $name $duration $delay $count;
-	-moz-animation: $name $duration $delay $count;
-	-o-animation: $name $duration $delay $count;
-	-ms-animation: $name $duration $delay $count;
-	animation: $name $duration $delay $count;
-}
-
 @for $i from 0 to 2 {
 	.bread-animation#{$i} {
 		position: absolute;
@@ -18,7 +10,6 @@
 		height: 50px;
 		width: 50px;
 		opacity: 0;
-		// transition: ease-in;
 
 		@include animation(jump#{$i}, 1s, 0s, 1);
 	}

@@ -1,4 +1,8 @@
 @import "config";
+@import "heart";
+@import "bread";
+@import "rocket";
+@import "alien";
 
 * {
 	box-sizing: border-box;
@@ -28,8 +32,3 @@
 	background-color: $alien-back;
 	left: 75%;
 }
-
-@import "heart";
-@import "bread";
-@import "rocket";
-@import "alien";

@@ -7,10 +7,8 @@ $bread-back: #f9d265;
 $rocket-back: #a94e78;
 
 $alien-back: #275c63;
-// $alien-back: #678d58;
 $alien-curtain: #020525;
 $alien-beam: #e4e4b0;
-// $alien-beam: #6d6d38;
 
 %container {
 	display: inline-block;
@@ -31,4 +29,12 @@ $alien-beam: #e4e4b0;
 			cursor: pointer;
 		}
 	}
+}
+
+@mixin animation($name, $duration, $delay, $count) {
+	-webkit-animation: $name $duration $delay $count;
+	-moz-animation: $name $duration $delay $count;
+	-o-animation: $name $duration $delay $count;
+	-ms-animation: $name $duration $delay $count;
+	animation: $name $duration $delay $count;
 }
