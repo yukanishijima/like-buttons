@@ -31,7 +31,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly0 6s 0.00684s 1;
+  animation: fly0 6s 0.00249s 1;
 }
 
 .heart-animation1 {
@@ -45,7 +45,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly1 6s 0.00705s 1;
+  animation: fly1 6s 0.00832s 1;
 }
 
 .heart-animation2 {
@@ -59,7 +59,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly2 6s 0.00868s 1;
+  animation: fly2 6s 0.00066s 1;
 }
 
 .heart-animation3 {
@@ -73,7 +73,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly3 6s 0.00928s 1;
+  animation: fly3 6s 0.00594s 1;
 }
 
 .heart-animation4 {
@@ -87,7 +87,7 @@
   height: 40px;
   width: 40px;
   opacity: 0;
-  animation: fly4 6s 0.00849s 1;
+  animation: fly4 6s 0.00051s 1;
 }
 
 @keyframes fly0 {
@@ -300,7 +300,7 @@
   background-color: #020525;
 }
 
-.curtain-animation {
+.curtain-blackout {
   position: absolute;
   opacity: 1;
   transition: ease-in;
@@ -316,7 +316,7 @@
   }
 }
 
-.curtain-open {
+.curtain-lightup {
   position: absolute;
   opacity: 0;
   transition: ease-in;
@@ -374,7 +374,7 @@
   }
 }
 
-.beam-animation-down {
+.beam-down {
   top: 0;
   opacity: 1;
   animation: spotlight-down 3s 0s 1;
@@ -393,7 +393,7 @@
   }
 }
 
-.beam-animation-up {
+.beam-up {
   opacity: 1;
   animation: spotlight-up 2.5s 0s 1;
 }
@@ -407,7 +407,7 @@
   }
 }
 
-.alien-animation {
+.alien-travel {
   transition: ease-in;
   animation: travel 4.5s 0s 1;
 }
@@ -424,7 +424,7 @@
   }
 }
 
-.alien-animation-back {
+.alien-back {
   transition: ease-out;
   animation: appear 2.5s 0s 1;
 }

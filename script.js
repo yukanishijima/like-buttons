@@ -77,34 +77,37 @@ const curtain = document.querySelector(".curtain");
 const beam = document.querySelector(".beam");
 const alienBtn = document.querySelector(".alienBtn");
 
+const delay = (time) =>
+	new Promise((resolve) => {
+		setTimeout(resolve, time);
+	});
+
 alienBtn.addEventListener("click", () => {
-	curtain.classList.add("curtain-animation");
+	curtain.classList.add("curtain-blackout");
 
-	setTimeout(() => {
-		beam.classList.add("beam-animation-down");
+	delay(1200).then(() => {
+		beam.classList.add("beam-down");
+		delay(3000).then(() => {
+			alienBtn.classList.add("alien-travel");
+			delay(1500).then(() => {
+				beam.classList.add("beam-up");
+				beam.classList.remove("beam-down");
+			});
+		});
+	});
 
-		setTimeout(() => {
-			alienBtn.classList.add("alien-animation");
+	delay(8200).then(() => {
+		beam.classList.remove("beam-up");
+		curtain.classList.remove("curtain-blackout");
 
-			setTimeout(() => {
-				beam.classList.add("beam-animation-up");
-				beam.classList.remove("beam-animation-down");
-			}, 1500);
-		}, 3000);
-	}, 1200);
+		curtain.classList.add("curtain-lightup");
 
-	setTimeout(() => {
-		beam.classList.remove("beam-animation-up");
-		curtain.classList.remove("curtain-animation");
+		alienBtn.classList.remove("alien-travel");
+		alienBtn.classList.add("alien-back");
 
-		curtain.classList.add("curtain-open");
-
-		alienBtn.classList.remove("alien-animation");
-		alienBtn.classList.add("alien-animation-back");
-
-		setTimeout(() => {
-			curtain.classList.remove("curtain-open");
-			alienBtn.classList.remove("alien-animation-back");
-		}, 1000);
-	}, 8200);
+		delay(1000).then(() => {
+			curtain.classList.remove("curtain-lightup");
+			alienBtn.classList.remove("alien-back");
+		});
+	});
 });

@@ -3,7 +3,7 @@
 	height: 100vh;
 	background-color: $alien-curtain;
 }
-.curtain-animation {
+.curtain-blackout {
 	position: absolute;
 	opacity: 1;
 	transition: ease-in;
@@ -17,7 +17,7 @@
 		opacity: 1;
 	}
 }
-.curtain-open {
+.curtain-lightup {
 	position: absolute;
 	opacity: 0;
 	transition: ease-in;
@@ -72,7 +72,7 @@
 	}
 }
 
-.beam-animation-down {
+.beam-down {
 	top: 0;
 	opacity: 1;
 	@include animation(spotlight-down, 3s, 0s, 1);
@@ -89,7 +89,7 @@
 		opacity: 1;
 	}
 }
-.beam-animation-up {
+.beam-up {
 	opacity: 1;
 	@include animation(spotlight-up, 2.5s, 0s, 1);
 }
@@ -102,7 +102,7 @@
 	}
 }
 
-.alien-animation {
+.alien-travel {
 	transition: ease-in;
 	@include animation(travel, 4.5s, 0s, 1);
 }
@@ -118,7 +118,7 @@
 	}
 }
 
-.alien-animation-back {
+.alien-back {
 	transition: ease-out;
 	@include animation(appear, 2.5s, 0s, 1);
 }
